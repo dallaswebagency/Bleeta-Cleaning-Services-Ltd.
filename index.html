@@ -66,9 +66,11 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;hei
 .hero h1 .dot{color:var(--mint)}
 .hero-lede{max-width:540px;font-size:1.13rem;color:#333;font-weight:300}
 .hero-cta{display:flex;gap:1rem;margin:2.2rem 0 3rem;flex-wrap:wrap}
-.hero-visual{position:relative}
-.hero-visual .ph{aspect-ratio:3/4;background:var(--ink) url(images/hero.jpg) center/cover;clip-path:polygon(0 0,100% 0,100% 100%,14% 100%,0 88%)}
-.ticket{position:absolute;left:-4.5rem;bottom:2.2rem;width:300px;background:#fff;box-shadow:0 30px 60px -20px rgba(15,26,20,.35);font-size:.86rem}
+.hero-visual{position:relative;margin:0 1.4rem 1.4rem 0}
+.hero-visual::before{content:"";position:absolute;top:2.4rem;left:2.4rem;right:-1.4rem;bottom:-1.4rem;background:repeating-linear-gradient(-45deg,var(--mint) 0 10px,var(--mint-d) 10px 12px);z-index:0}
+.hero-visual::after{content:"";position:absolute;top:-14px;left:-14px;width:38%;height:30%;border-top:2px solid var(--ink);border-left:2px solid var(--ink);z-index:2;pointer-events:none}
+.hero-visual .ph{position:relative;z-index:1;aspect-ratio:3/4;background:var(--ink) url(images/hero.jpg) center/cover}
+.ticket{z-index:3;position:absolute;left:-8rem;bottom:-2.6rem;width:290px;background:#fff;box-shadow:0 30px 60px -20px rgba(15,26,20,.35);font-size:.86rem}
 .ticket-head{background:var(--ink);color:#fff;display:flex;justify-content:space-between;padding:.7rem 1rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
 .ticket-head b{color:var(--mint);font-weight:500}
 .ticket ul{list-style:none;padding:.4rem 1rem 1rem}
